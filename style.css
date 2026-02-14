@@ -14,8 +14,48 @@ body {
     background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23999999' fill-opacity='0.4'%3E%3Cellipse cx='50' cy='60' rx='20' ry='15'/%3E%3Cellipse cx='35' cy='40' rx='8' ry='10'/%3E%3Cellipse cx='50' cy='35' rx='8' ry='10'/%3E%3Cellipse cx='65' cy='40' rx='8' ry='10'/%3E%3Cellipse cx='50' cy='45' rx='6' ry='8'/%3E%3C/g%3E%3C/svg%3E");
     background-repeat: repeat;
     background-size: 150px;
-    padding-top: 60px;  
+    padding-top: 60px; 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {         /* This is the form container */
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
 
 header {
     background: #2b0c45;
@@ -62,9 +102,10 @@ nav a:hover {
    LAYOUT
 ========================= */
 main {
+    text-align: center;
     width: 90%;
-    max-width: 1100px;
-    margin: 40px auto;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 section {
@@ -91,11 +132,19 @@ h3 {
     color: #111827;
 }
 
+ul {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
+    
+}
+
 /* =========================
    IMAGES
 ========================= */
 img {
     display: block;
+    margin: 0 auto;
     max-width: 100%;
     border-radius: 50px; /* optional rounding */
     -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
@@ -139,7 +188,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     left: 10px;
-    margin-top: 20px;
+    margin: 0 auto;
     background: #fff;
     box-shadow: -12px 8px 10px rgba(0,0,0,0.5), inset 4px 0 6px rgba(0,0,0,0.2);
 }
@@ -195,3 +244,35 @@ table a button:active {
 /* =========================
    RESPONSIVE
 ========================= */
+
+/* =========================
+   BUTTON STYLE
+========================= */
+button {
+    width: 50%;
+    padding: 12px 20px;
+    margin-top: 20px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background: rgba(96, 11, 152, 0.8); /* semi-transparent purple */
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+button:hover {
+    background: rgba(96, 11, 152, 1); /* solid purple on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+

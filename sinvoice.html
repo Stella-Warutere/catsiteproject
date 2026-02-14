@@ -3,31 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Details Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Parfumerie+Script+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Invoice</title>
 </head>
-<body bgcolor="f4b6a6">
+<body>
+    <header>
+    <nav>
+        <a href="newfile.html">Home</a> |
+        <a href="login.html">Login</a> |
+        <a href="signup.html">Sign Up</a> |
+        <a href="feedback.html">Feedback</a> |
+        <a href="tc.html">Terms and Conditions</a>
+    </nav>
+</header>
+    <main class="container">
+        <div class="card">
     <h1>Purchase Details</h1>
-    <form>
+    <form id="purchaseForm">
+        <input type="hidden" id="breed" name="breed">
+        <input type="hidden" id="price" name="price">
+
         <label for="firstname">First Name:</label>
-        <input type="text" id="firstname" required placeholder="Enter your first name"><br>
+        <input type="text" id="firstname" required placeholder="Enter your first name">
 
         <label for="lastname">Last Name:</label>
-        <input type="text" id="lastname" required placeholder="Enter your last name"><br>
+        <input type="text" id="lastname" required placeholder="Enter your last name">
 
         <label for="emailaddress">Email Address:</label>
-        <input type="email" id="emailaddress" required placeholder="Enter your email address"><br>
+        <input type="email" id="emailaddress" required placeholder="Enter your email address">
         <label for="location">Location:</label>
-        <input type="text" id="location" required placeholder="Enter your location"><br>
+        <input type="text" id="location" required placeholder="Enter your location">
 
         <h3><strong>Gender</strong></h3>
         <label for="male">Male</label>
-        <input type="radio" name="gender" id="male" value="male"><br>
+        <input type="radio" name="gender" id="male" value="male">
 
         <label for="female">Female</label>
-        <input type="radio" name="gender" id="female" value="female"><br>
+        <input type="radio" name="gender" id="female" value="female">
 
         <label for="other">Other</label>
-        <input type="radio" name="gender" id="other" value="other"><br>
+        <input type="radio" name="gender" id="other" value="other">
 
         <h3><strong>Select Payment Method</strong></h3>
         <select name="Payment">
@@ -42,12 +58,12 @@
         <label for="bank account">Bank Account Number:</label>
         <input type="text" id="bank account" required placeholder="Enter your Bank Acc No."><br>
         <label for="crypto">Crypto Address:</label>
-        <input type="text" id="crypto" required placeholder="Enter your Crypto Address"><br>
+        <input type="text" id="crypto" required placeholder="Enter your Crypto Address">
+        <button type="submit">Purchase</button>
     </form>
-    <a href="..//Invoices/New Cat Site Invoice.pdf">
-    <button>
-        Purchase
-    </button>
-    </a>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="invoice.js"></script>
 </body>
 </html>
