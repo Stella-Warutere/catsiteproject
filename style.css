@@ -97,13 +97,21 @@ h3 {
 img {
     display: block;
     max-width: 100%;
-    border-radius: 10px;
-    margin: 15px 0;
-    transition: transform 0.3s ease;
+    border-radius: 50px; /* optional rounding */
+    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover;
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
 }
+
 
 img:hover {
     transform: scale(1.03);
+    transition: 0.4s ease;
 }
 
 /* =========================
@@ -176,7 +184,7 @@ table a {
 table a:hover {
     background: #3a035bf8;
     transform: translateY(-2px);
-    box-shadow: -4px 6px 12px rgba(0,0,0,0.8);
+    box-shadow: -4px 3px 12px rgba(0,0,0,0.8);
 }
 
 table a button:active {
