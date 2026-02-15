@@ -9,6 +9,8 @@
     <title>Sign-up Page</title>
 </head>
 <body>
+    <main class="container">
+        <div class="card">
     <header>
     <nav>
         <a href="newfile.html">Home</a> |
@@ -18,7 +20,7 @@
     </nav>
 </header>
         <h1>Sign-up Page</h1>
-        <form action="login.html" method="get">
+        <form id="signupform">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required placeholder="Enter your username"><br><br>
 
@@ -28,5 +30,15 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required placeholder="Enter your password"><br><br>
 
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password"><br><br>
+
             <input type="submit" value="Sign Up">
         </form>
+        <p>Already have an account? <a href="login.html">Login here</a>.</p>
+    </div>
+    </main>
+
+    <script src="signup.js"></script>
+</body>
+</html>

@@ -9,6 +9,8 @@
     <title>Login Page</title>
 </head>
 <body>
+    <main class="container">
+        <div class="card">
     <header>
     <nav>
         <a href="newfile.html">Home</a> |
@@ -18,9 +20,9 @@
     </nav>
 </header>
         <h1>Login Page</h1>
-        <form action="success.html" method="get">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required placeholder="Enter your username"><br><br>
+        <form id="loginform">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email"><br><br>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required placeholder="Enter your password"><br><br>
@@ -34,5 +36,8 @@
             Don't have an account? 
             <a href="Signup.html">Sign up here</a>.
         </p>
+    </div>
+    </main>
+    <script src="login.js"></script>
 </body>
 </html>
