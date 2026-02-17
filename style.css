@@ -10,7 +10,7 @@
 body {
    font-family: Arial, Helvetica, sans-serif; 
     line-height: 1.6;
-    background-color: #deb8f4;
+    background-color: #ffffff;
     background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23999999' fill-opacity='0.4'%3E%3Cellipse cx='50' cy='60' rx='20' ry='15'/%3E%3Cellipse cx='35' cy='40' rx='8' ry='10'/%3E%3Cellipse cx='50' cy='35' rx='8' ry='10'/%3E%3Cellipse cx='65' cy='40' rx='8' ry='10'/%3E%3Cellipse cx='50' cy='45' rx='6' ry='8'/%3E%3C/g%3E%3C/svg%3E");
     background-repeat: repeat;
     background-size: 150px;
@@ -26,6 +26,7 @@ body {
     max-width: 1000px;
     margin: 0 auto;
 }
+
 
 .card {         /* This is the form container */
     width: 100%;
@@ -102,6 +103,7 @@ nav a:hover {
    LAYOUT
 ========================= */
 main {
+    font-family: 'Karla', sans-serif;
     text-align: center;
     width: 90%;
     max-width: 1000px;
@@ -116,9 +118,13 @@ section {
    HEADINGS
 ========================= */
 h1 {
-    font-family: 'Parfumerie Script Pro', cursive;
+    font-family: 'Libre Baskerville', serif;
     font-size: 2.5rem;
     margin-bottom: 10px;
+    margin: 0 auto;
+    text-align: left;
+    width: fit-content;
+    line-height: 29px;
 }
 
 h2 {
@@ -245,6 +251,12 @@ table a button:active {
    RESPONSIVE
 ========================= */
 
+textarea {
+    width: 50%;
+    background-color:#e9e5e5;
+    border-radius: 10px;
+}
+
 /* =========================
    BUTTON STYLE
 ========================= */
@@ -279,9 +291,3 @@ button:active {
 /* =========================
    FEEDBACK PAGE
 ========================= */
-.reviewing {
-    display:flex;
-    align-items: center;/*vertical alignment*/
-    justify-content: center;
-    height: 100vh;
-}
