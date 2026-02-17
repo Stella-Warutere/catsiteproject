@@ -276,3 +276,12 @@ button:active {
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
+/* =========================
+   FEEDBACK PAGE
+========================= */
+.reviewing {
+    display:flex;
+    align-items: center;/*vertical alignment*/
+    justify-content: center;
+    height: 100vh;
+}
