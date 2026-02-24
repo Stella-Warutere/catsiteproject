@@ -46,19 +46,30 @@
         <input type="radio" name="gender" id="other" value="other">
 
         <h3><strong>Select Payment Method</strong></h3>
-        <select name="Payment">
-            <option>M-Pesa</option>
-            <option>Bank</option>
-            <option>Crypto</option>
+        <select name="Payment" id="paymentMethod" required>
+            <option value="">--Select Payment Method--</option>
+            <option value="M-Pesa">M-Pesa</option>
+            <option value="Bank">Bank</option>
+            <option value="Crypto">Crypto</option>
         </select>
 
         <h3><strong>Account Details</strong></h3>
+
+        <div id="mpesaField" style="display: none;">
         <label for="mpesa">M-Pesa Number:</label>
-        <input type="text" id="mpesa" required placeholder="Enter your phone Number"><br>
+        <input type="text" id="mpesa" placeholder="07XXXXXXXX"><br>
+        </div>
+
+        <div id="bankField" style="display: none;">
         <label for="bank account">Bank Account Number:</label>
-        <input type="text" id="bank account" required placeholder="Enter your Bank Acc No."><br>
+        <input type="text" id="bankAccount" placeholder="XXXX XXXX XXXX XXXX"><br>
+        </div>
+        
+        <div id="cryptoField" style="display: none;">
         <label for="crypto">Crypto Address:</label>
-        <input type="text" id="crypto" required placeholder="Enter your Crypto Address">
+        <input type="text" id="crypto" placeholder="Enter your Crypto Address">
+        </div>
+
         <button type="submit">Purchase</button>
     </form>
         </div>

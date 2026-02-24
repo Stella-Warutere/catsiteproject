@@ -5,6 +5,56 @@ document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
     const breed = urlParams.get('breed') || '';
     const price = urlParams.get('price') ? `$${urlParams.get('price')}` : '';
+    
+    const paymentSelect = document.getElementById("paymentMethod");
+    const mpesaField = document.getElementById("mpesaField");
+    const bankField = document.getElementById("bankField");
+    const cryptoField = document.getElementById("cryptoField");
+
+    const mpesaInput = document.getElementById("mpesa");
+    const bankInput = document.getElementById("bankAccount");
+    const cryptoInput = document.getElementById("crypto");
+    console.log(mpesaInput, bankInput, cryptoInput);
+
+    //Kenyan Mpesa format
+mpesaInput.pattern = "^(07|01)\\d{8}$";
+
+//Ethereum address format
+cryptoInput.pattern = "^0x[a-fA-F0-9]{40}$";
+cryptoInput.title = "Enter a valid Ethereum address";
+
+    paymentSelect.addEventListener("change", function() {
+        
+        const selected = this.value.trim();
+        console.log("Selected:", selected);
+        //Hide all fields first
+        mpesaField.style.display = "none";
+        bankField.style.display = "none";
+        cryptoField.style.display = "none";
+
+        //Remove required from all
+        mpesaInput.required = false;
+        bankInput.required = false;
+        cryptoInput.required = false;
+
+        //Show selected one 
+        if (this.value ==="M-Pesa"){
+            mpesaField.style.display = "block";
+            mpesaInput.required = true;
+        }
+
+        else if (this.value ==="Bank"){
+            bankField.style.display = "block";
+            bankInput.required = true;
+        }
+
+        else if (this.value ==="Crypto"){
+            cryptoField.style.display = "block";
+            cryptoInput.required = true;
+        }
+    });
+
+
 
     // Populate hidden fields
     document.getElementById('breed').value = breed;
@@ -37,7 +87,7 @@ document.getElementById('purchaseForm').addEventListener('submit', function(e) {
     const gender = document.querySelector('input[name="gender"]:checked')?.value || '';
     const payment = document.querySelector('select[name="Payment"]').value;
     const mpesa = document.getElementById('mpesa').value;
-    const bank = document.getElementById('bank account').value;
+    const bank = document.getElementById('bankAccount').value;
     const crypto = document.getElementById('crypto').value;
     const breed = document.getElementById('breed').value;
     const price = document.getElementById('price').value;
