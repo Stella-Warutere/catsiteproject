@@ -119,6 +119,7 @@ document.getElementById('purchaseForm').addEventListener('submit', function(e) {
 
     // Save the PDF
     doc.save(`Invoice_${firstName}_${lastName}.pdf`);
+    alert('Thank You for shopping with The Furry Friends!');
      // Close the page after a short delay to ensure the PDF save dialog appears
     setTimeout(() => {
         window.close();
