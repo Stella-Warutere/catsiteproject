@@ -12,27 +12,29 @@
 </head>
 
 <body>
-
-<header>
+    <!--icon to toggle vertical nav-->
+<div id="userIcon">
+    <img src="/images/user.png" alt="User">
+</div>
+<div class="vertical-nav" id="verticalNav">
+            <section id="profile">
+            <h2 id="welcome-msg"></h2>
+            <p id="user-info"></p>
     <nav>
-        <a href="login.html">Login</a> |
-        <a href="signup.html">Sign Up</a> |
-        <a href="feedback.html">Feedback</a> |
+        <a href="login.html">Login</a> 
+        <a href="signup.html">Sign Up</a> 
+        <a href="feedback.html">Feedback</a> 
         <a href="tc.html">Terms and Conditions</a>
     </nav>
-</header>
+        <button id="logoutBtn">Logout</button>
+    </section>
+</div>
 
-<hr>
 
 <main class="container">
 
     <section id="top">
         <h1>the<br><i>furry</i>Friends</h1>
-        <section id="profile">
-            <h2 id="welcome-msg"></h2>
-            <p id="user-info"></p>
-            <button id="logoutBtn">Logout</button>
-        </section>
         <h2>Welcome to our Cat Site!</h2>
         <p>We display different breeds of cats from around the world.</p>
         <p><a href="#bottom">Go to Bottom</a></p>
@@ -224,5 +226,26 @@
 </main>
 <script src="profile.js"></script>
 <script src="logout.js"></script>
+<script>
+//Get elements
+const userIcon = document.getElementById('userIcon');
+const verticalNav = document.getElementById('verticalNav');
+
+//Toggle vertical nav
+userIcon.addEventListener('click', (e) => {
+    e.stopPropagation();
+    verticalNav.classList.toggle('active');
+    userIcon.classList.toggle('active');
+});
+
+//Close nav when clicking outside
+document.addEventListener('click', (e) => {
+    if (!verticalNav.contains(e.target) && !userIcon.contains(e.target)) {
+        verticalNav.classList.remove('active');
+        userIcon.classList.remove('active');
+    }
+});
+
+</script>
 </body>
 </html>

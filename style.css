@@ -20,6 +20,88 @@ body {
     justify-content: center;
     align-items: center;
 }
+/* Person icon */
+#userIcon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: left 0.3s ease;
+}
+
+#userIcon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.vertical-nav.active ~ #userIcon,
+#userIcon.active {
+    left: 180px;
+}
+
+/* Vertical nav styles */
+.vertical-nav {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.vertical-nav nav {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* When active (visible) */
+.vertical-nav.active {
+    left: 0;
+}
+
+/* Nav links inside vertical nav */
+.vertical-nav nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin: 15px 0;
+    font-size: 18px;
+    transition: color 0.2s;
+}
+
+.vertical-nav nav a:hover {
+    color: #00aced;
+}
+
+/* Profile section inside vertical nav */
+.vertical-nav #profile h2,
+.vertical-nav #profile p {
+    margin: 10px 0;
+    word-break: break-word;
+}
+
+.vertical-nav button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.vertical-nav button:hover {
+    background-color: #777;
+}
 
 .container {
     width: 90%;
