@@ -23,27 +23,27 @@ body {
 @keyframes slideShow{
 
 0%{
-background-image:url("../images/cat1.jpg");
+background-image:url("..//images/cat1.jpg");
 }
 
 20%{
-background-image:url("../images/cat2.jpg");
+background-image:url("..//images/cat2.jpg");
 }
 
 40%{
-background-image:url("../images/cat3.jpg");
+background-image:url("..//images/cat3.jpg");
 }
 
 60%{
-background-image:url("../images/cat4.jpg");
+background-image:url("..//images/cat4.jpg");
 }
 
 80%{
-background-image:url("../images/cat5.png");
+background-image:url("..//images/cat5.png");
 }
 
 100%{
-background-image:url("../images/cat1.jpg");
+background-image:url("..//images/cat1.jpg");
 }
 
 }
