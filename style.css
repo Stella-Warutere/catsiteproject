@@ -18,8 +18,8 @@ body {
     justify-content: center;
     align-items: center;
     background-position: center;
-    animation: slideShow 25s infinite;
 }
+.hero {animation: slideShow 25s infinite;}
 @keyframes slideShow{
 
 0%{
