@@ -2,151 +2,212 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cat Site</title>
+    <title>The Furry Friends</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore different breeds of cats from around the world.">
-    
+    <meta name="description" content="Explore cat breeds, watch short videos, and purchase your next companion on The Furry Friends.">
     <link rel="stylesheet" href="style.css">
 </head>
+<body class="landing-page">
+<a class="skip-link" href="#mainContent">Skip to content</a>
 
-<body>
-    <!--icon to toggle vertical nav-->
-<div id="userIcon">
-    <img src="/images/user.png" alt="User">
+<div id="userIcon" aria-label="Open profile menu" role="button" tabindex="0">
+    <img src="/images/user.png" alt="User profile">
 </div>
-<div class="vertical-nav" id="verticalNav">
-            <section id="profile">
-            <h2 id="welcome-msg"></h2>
-            <p id="user-info"></p>
-    <nav>
-        <a href="login.html">Login</a> 
-        <a href="signup.html">Sign Up</a> 
-        <a href="feedback.html">Feedback</a> 
-        <a href="tc.html">Terms and Conditions</a>
-    </nav>
+
+<aside class="vertical-nav" id="verticalNav" aria-label="Profile menu">
+    <section id="profile">
+        <h2 id="welcome-msg"></h2>
+        <p id="user-info"></p>
+        <nav>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="tc.html">Terms and Conditions</a>
+        </nav>
         <button id="logoutBtn">Logout</button>
     </section>
-</div>
+</aside>
 
+<main id="mainContent" class="container">
+    <section class="hero-background-section">
+        <div class="background-image" aria-hidden="true">
+            <img src="/images/cat2.png" alt="">
+        </div>
 
-<main class="container">
+        <section id="top" class="hero-copy">
+            <p class="eyebrow">Curated Cat Companions</p>
+            <h1>the<br><i>furry</i>Friends</h1>
+            <h2>Fur lovers, purrfect homes</h2>
+            <p class="hero-intro">
+                We started The Furry Friends with one goal: connect healthy, charming cats with people who will love them for life.
+                Browse the breeds, watch a quick video, and move from discovery to purchase in a few simple steps.
+            </p>
+            <div class="hero-actions">
+                <a href="#inventory">Browse Inventory</a>
+                <a href="#bottom">Go to Bottom</a>
+            </div>
+        </section>
 
-    <section id="top">
-        <h1>🐈 the<br><i>furry</i>Friends </h1>
-        <h2><em>Fur lovers,purrfect homes🐾</em></h2>
-        <p>"My team and I started this site because we believe that every cat deserves a loving home. Our mission is simple: connecting adorable cats with people who will cherish them. We make the process easy, fast and full of love. You are welcome to choose your furry friend!"- Peterson, Founder </p>
-        <p><a href="#bottom">Go to Bottom</a></p>
+        <section class="hero-breeds">
+            <h3>Featured Breeds</h3>
+            <ul>
+                <li>Siamese Cat</li>
+                <li>British Shorthair</li>
+                <li>Maine Coon</li>
+                <li>Persian Cat</li>
+                <li>Ragdoll</li>
+            </ul>
+        </section>
     </section>
 
-    <section>
-        <h2>Cat Breeds</h2>
-        <ul>
-            <li>Siamese Cat</li>
-            <li>British Shorthair</li>
-            <li>Maine Coon</li>
-            <li>Persian Cat</li>
-            <li>Ragdoll</li>
-        </ul>
-    </section>
-
-    <section>
-        <h3>Siamese Cat</h3>
+    <section class="content-panel section-intro">
+        <p class="section-kicker">Breed Showcase</p>
+        <h2>Find the personality that fits your home</h2>
         <p>
-            One of the first distinctly recognized Asian cat breeds.
-            It features blue almond-shaped eyes, a triangular head,
-            large ears, and a muscular body.
+            Each breed card gives you a quick profile, a video shortcut, and a trusted external reference so you can compare before purchasing.
         </p>
-        <a href="siamese.html">
+    </section>
+
+    <section class="breed-card">
+        <a class="breed-card-image" href="siamese.html">
             <img src="../images/Siamese 2.jpg" alt="Siamese Cat sitting down" width="390" height="350">
         </a>
-        <p>
-            For more information about Siamese cats,
-            <a href="https://www.thesprucepets.com/siamese-cat-breed-profile-551912" target="_blank">
-                click here
-            </a>
-        </p>
+        <div class="breed-card-content">
+            <h3>Siamese Cat</h3>
+            <p><strong>Best known for:</strong> striking blue eyes and a talkative nature.</p>
+            <p>
+                One of the first distinctly recognized Asian cat breeds with a triangular head,
+                large ears, and an elegant, muscular build.
+            </p>
+            <div class="breed-card-actions">
+                <a class="breed-video-btn" href="siamese.html">Watch video</a>
+                <p>
+                    For more information about Siamese cats,
+                    <a href="https://www.thesprucepets.com/siamese-cat-breed-profile-551912" target="_blank" rel="noopener noreferrer">
+                        click here
+                    </a>
+                </p>
+            </div>
+        </div>
     </section>
 
-    <section>
-        <h3>British Shorthair</h3>
-        <p>
-            A medium-sized British breed with a round face,
-            teddy-bear appearance, and calm personality.
-        </p>
-        <a href="british.html">
+    <section class="breed-card">
+        <a class="breed-card-image" href="british.html">
             <img src="../images/British.png" alt="British Shorthair" width="410" height="350">
         </a>
-        <p>
-            For more information about British Shorthairs,
-            <a href="https://www.thesprucepets.com/british-shorthair-5219450" target="_blank">
-                click here
-            </a>
-        </p>
+        <div class="breed-card-content">
+            <h3>British Shorthair</h3>
+            <p><strong>Best known for:</strong> a plush coat and calm indoor temperament.</p>
+            <p>
+                A medium-sized British breed with a round face, teddy-bear appearance,
+                and a relaxed, easy-going personality.
+            </p>
+            <div class="breed-card-actions">
+                <a class="breed-video-btn" href="british.html">Watch video</a>
+                <p>
+                    For more information about British Shorthairs,
+                    <a href="https://www.thesprucepets.com/british-shorthair-5219450" target="_blank" rel="noopener noreferrer">
+                        click here
+                    </a>
+                </p>
+            </div>
+        </div>
     </section>
 
-    <section>
-        <h3>Maine Coon</h3>
-        <p>
-            One of the largest domesticated cat breeds and the oldest
-            long-haired breed native to North America.
-        </p>
-        <a href="maine.html">
+    <section class="breed-card">
+        <a class="breed-card-image" href="maine.html">
             <img src="../images/Maine Coon.jpg" alt="Maine Coon Cat" width="410" height="350">
         </a>
-        <p>
-            For more information about Maine Coons,
-            <a href="https://www.thesprucepets.com/maine-coon-cat-breed-profile-characteristics-and-care-5221962" target="_blank">
-                click here
-            </a>
-        </p>
+        <div class="breed-card-content">
+            <h3>Maine Coon</h3>
+            <p><strong>Best known for:</strong> large size and a friendly, loyal personality.</p>
+            <p>
+                One of the largest domesticated cat breeds and one of the oldest
+                long-haired breeds native to North America.
+            </p>
+            <div class="breed-card-actions">
+                <a class="breed-video-btn" href="maine.html">Watch video</a>
+                <p>
+                    For more information about Maine Coons,
+                    <a href="https://www.thesprucepets.com/maine-coon-cat-breed-profile-characteristics-and-care-5221962" target="_blank" rel="noopener noreferrer">
+                        click here
+                    </a>
+                </p>
+            </div>
+        </div>
     </section>
 
-    <section>
-        <h3>Persian Cat</h3>
-        <p>
-            A medium-to-large breed with a sturdy body, short legs,
-            broad chest, round head, and short muzzle.
-        </p>
-        <a href="persian.html">
+    <section class="breed-card">
+        <a class="breed-card-image" href="persian.html">
             <img src="../images/Persian.jpeg" alt="Persian Cat" width="410" height="350">
         </a>
-        <p>
-            For more information about Persian cats,
-            <a href="https://www.thesprucepets.com/persian-cat-breed-5220970" target="_blank">
-                click here
-            </a>
-        </p>
+        <div class="breed-card-content">
+            <h3>Persian Cat</h3>
+            <p><strong>Best known for:</strong> a long coat and calm, gentle presence.</p>
+            <p>
+                A medium-to-large breed with a sturdy body, short legs,
+                broad chest, round head, and short muzzle.
+            </p>
+            <div class="breed-card-actions">
+                <a class="breed-video-btn" href="persian.html">Watch video</a>
+                <p>
+                    For more information about Persian cats,
+                    <a href="https://www.thesprucepets.com/persian-cat-breed-5220970" target="_blank" rel="noopener noreferrer">
+                        click here
+                    </a>
+                </p>
+            </div>
+        </div>
     </section>
 
-    <section>
-        <h3>Ragdoll</h3>
-        <p>
-            A large blue-eyed breed with an affectionate,
-            dog-like personality. Fully matures around four years.
-        </p>
-        <a href="ragdoll.html">
+    <section class="breed-card">
+        <a class="breed-card-image" href="ragdoll.html">
             <img src="../images/Ragdoll.jpg" alt="Ragdoll Cat" width="410" height="350">
         </a>
-        <p>
-            For more information about Ragdolls,
-            <a href="https://www.thesprucepets.com/ragdoll-cat-breed-profile-4583144" target="_blank">
-                click here
-            </a>
-        </p>
+        <div class="breed-card-content">
+            <h3>Ragdoll</h3>
+            <p><strong>Best known for:</strong> affectionate nature and a relaxed temperament.</p>
+            <p>
+                A large blue-eyed breed with a famously gentle, dog-like personality.
+                Ragdolls typically reach full maturity around four years.
+            </p>
+            <div class="breed-card-actions">
+                <a class="breed-video-btn" href="ragdoll.html">Watch video</a>
+                <p>
+                    For more information about Ragdolls,
+                    <a href="https://www.thesprucepets.com/ragdoll-cat-breed-profile-4583144" target="_blank" rel="noopener noreferrer">
+                        click here
+                    </a>
+                </p>
+            </div>
+        </div>
     </section>
 
-    <section>
-        <h3>Audio Description of our cats</h3>
-        <p>Listen below:</p>
+    <section class="content-panel audio-panel">
+        <div>
+            <p class="section-kicker">Audio Tour</p>
+            <h3>Listen while you browse</h3>
+            <p>Play the short audio introduction for a quick overview of the cats featured on the site.</p>
+        </div>
         <audio controls loop>
             <source src="/audiofile/catsiteaudio.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </section>
-    <section>
-        <h3>Inventory</h3>
 
-        <table border="1">
+    <section id="inventory" class="content-panel inventory-panel">
+        <div class="inventory-header">
+            <div>
+                <p class="section-kicker">Inventory</p>
+                <h3>Available Now</h3>
+            </div>
+            <div class="inventory-summary">
+                <p id="wishlistStatus" class="wishlist-status" aria-live="polite">No cats in your wishlist yet.</p>
+                <button id="clearWishlistBtn" class="secondary-btn" type="button">Clear wishlist</button>
+            </div>
+        </div>
+
+        <table>
             <thead>
                 <tr>
                     <th>Breed</th>
@@ -158,91 +219,95 @@
                     <th>Wishlist</th>
                 </tr>
             </thead>
-
             <tbody>
                 <tr>
                     <td>Siamese Cat</td>
                     <td>Thailand</td>
                     <td>Social, Vocal</td>
-                    <td>15–20 years</td>
+                    <td>15-20 years</td>
                     <td>$1500</td>
-                    <td><a href="sinvoice.html?breed=Siamese%20Cat&price=$1500" target="_blank">Buy</a></td>
-                    <td><input type="checkbox"></td>
+                    <td><a href="sinvoice.html?breed=Siamese%20Cat&price=$1500" target="_blank" rel="noopener noreferrer">Buy</a></td>
+                    <td><input class="wishlist-toggle" type="checkbox" data-breed="Siamese Cat" aria-label="Add Siamese Cat to wishlist"></td>
                 </tr>
-
                 <tr>
                     <td>British Shorthair</td>
                     <td>United Kingdom</td>
                     <td>Calm, Easy-going</td>
-                    <td>12–20 years</td>
+                    <td>12-20 years</td>
                     <td>$1800</td>
-                    <td><a href="sinvoice.html?breed=British%20Shorthair&price=$1800" target="_blank">Buy</a></td>
-                    <td><input type="checkbox"></td>
+                    <td><a href="sinvoice.html?breed=British%20Shorthair&price=$1800" target="_blank" rel="noopener noreferrer">Buy</a></td>
+                    <td><input class="wishlist-toggle" type="checkbox" data-breed="British Shorthair" aria-label="Add British Shorthair to wishlist"></td>
                 </tr>
-
                 <tr>
                     <td>Maine Coon</td>
                     <td>United States</td>
                     <td>Friendly, Intelligent</td>
-                    <td>12–15 years</td>
+                    <td>12-15 years</td>
                     <td>$2500</td>
-                    <td><a href="sinvoice.html?breed=Maine%20Coon&price=$2500" target="_blank">Buy</a></td>
-                    <td><input type="checkbox"></td>
+                    <td><a href="sinvoice.html?breed=Maine%20Coon&price=$2500" target="_blank" rel="noopener noreferrer">Buy</a></td>
+                    <td><input class="wishlist-toggle" type="checkbox" data-breed="Maine Coon" aria-label="Add Maine Coon to wishlist"></td>
                 </tr>
-
                 <tr>
                     <td>Persian Cat</td>
                     <td>Iran</td>
                     <td>Affectionate, Quiet</td>
-                    <td>12–17 years</td>
+                    <td>12-17 years</td>
                     <td>$3500</td>
-                    <td><a href="sinvoice.html?breed=Persian%20Cat&price=$3500" target="_blank">Buy</a></td>
-                    <td><input type="checkbox"></td>
+                    <td><a href="sinvoice.html?breed=Persian%20Cat&price=$3500" target="_blank" rel="noopener noreferrer">Buy</a></td>
+                    <td><input class="wishlist-toggle" type="checkbox" data-breed="Persian Cat" aria-label="Add Persian Cat to wishlist"></td>
                 </tr>
-
                 <tr>
                     <td>Ragdoll</td>
                     <td>United States</td>
                     <td>Gentle, Affectionate</td>
-                    <td>12–15 years</td>
+                    <td>12-15 years</td>
                     <td>$2000</td>
-                    <td><a href="sinvoice.html?breed=Ragdoll&price=$2000" target="_blank">Buy</a></td>
-                    <td><input type="checkbox"></td>
+                    <td><a href="sinvoice.html?breed=Ragdoll&price=$2000" target="_blank" rel="noopener noreferrer">Buy</a></td>
+                    <td><input class="wishlist-toggle" type="checkbox" data-breed="Ragdoll" aria-label="Add Ragdoll to wishlist"></td>
                 </tr>
             </tbody>
         </table>
     </section>
 
-    <section id="bottom">
-        <p><a href="#top">Back to Top</a></p>
+    <section class="highlights-grid">
+        <article class="content-panel highlight-card">
+            <p class="section-kicker">Trust</p>
+            <h3>Healthy and well-cared for</h3>
+            <p>Every featured cat profile is presented with clear breed context so buyers can make informed decisions.</p>
+        </article>
+        <article class="content-panel highlight-card">
+            <p class="section-kicker">Guidance</p>
+            <h3>Simple purchase flow</h3>
+            <p>Browse, compare, choose a payment method, and generate a branded invoice in one streamlined flow.</p>
+        </article>
+        <article class="content-panel highlight-card">
+            <p class="section-kicker">Support</p>
+            <h3>Helpful information built in</h3>
+            <p>Video pages, feedback, terms, and purchase details are all easy to reach from anywhere on the site.</p>
+        </article>
     </section>
-    <footer>
-        <p>&copy; 2026 Cat Site. All rights reserved.</p>
+
+    <section id="bottom" class="content-panel footer-panel">
+        <div>
+            <p class="section-kicker">Questions?</p>
+            <h3>Stay in touch with The Furry Friends</h3>
+            <p>Email: <a href="mailto:catsite@example.com">catsite@example.com</a></p>
+        </div>
+        <div class="footer-actions">
+            <a href="#top">Back to Top</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 The Furry Friends. All rights reserved.</p>
     </footer>
-
 </main>
+
+<button id="scrollTopBtn" class="scroll-top-btn" type="button" aria-label="Scroll to top">
+    <span class="scroll-top-arrow">&lt;</span>
+</button>
+
 <script src="profile.js"></script>
-<script src="logout.js"></script>
-<script>
-//Get elements
-const userIcon = document.getElementById('userIcon');
-const verticalNav = document.getElementById('verticalNav');
-
-//Toggle vertical nav
-userIcon.addEventListener('click', (e) => {
-    e.stopPropagation();
-    verticalNav.classList.toggle('active');
-    userIcon.classList.toggle('active');
-});
-
-//Close nav when clicking outside
-document.addEventListener('click', (e) => {
-    if (!verticalNav.contains(e.target) && !userIcon.contains(e.target)) {
-        verticalNav.classList.remove('active');
-        userIcon.classList.remove('active');
-    }
-});
-
-</script>
+<script src="landing.js"></script>
 </body>
 </html>

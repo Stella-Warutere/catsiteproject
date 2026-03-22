@@ -4,8 +4,9 @@ const logoutBtn = document.getElementById('logoutBtn');
 
 // Display user information
 if (currentUser) {
-    document.getElementById('welcome-msg').textContent = `Welcome, ${currentUser.email}!`;
-    document.getElementById('user-info').textContent = `You are logged in as ${currentUser.email}.`;
+    const displayName = currentUser.username || currentUser.email;
+    document.getElementById('welcome-msg').textContent = `Welcome, ${displayName}!`;
+    document.getElementById('user-info').textContent = `You are logged in as ${displayName}.`;
     logoutBtn.style.display = 'inline-block'; // Show logout button
 } else {
     document.getElementById('welcome-msg').textContent = 'Welcome, Guest!';

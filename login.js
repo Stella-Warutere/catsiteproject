@@ -1,5 +1,6 @@
 //Select the form
 const loginForm = document.getElementById('loginform');
+const POST_LOGIN_REDIRECT_KEY = 'postLoginRedirect';
 
 // Listen for form submission
 loginForm.addEventListener('submit', function(e) {
@@ -18,6 +19,14 @@ loginForm.addEventListener('submit', function(e) {
    if (user) {
        alert('Login successful!');
        localStorage.setItem('currentUser', JSON.stringify(user));
+       const redirectTarget = localStorage.getItem(POST_LOGIN_REDIRECT_KEY);
+
+       if (redirectTarget) {
+           localStorage.removeItem(POST_LOGIN_REDIRECT_KEY);
+           window.location.href = redirectTarget;
+           return;
+       }
+
        // Redirect to the success page
        window.location.href = 'success.html';
    } else {
