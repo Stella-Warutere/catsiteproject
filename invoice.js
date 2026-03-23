@@ -175,7 +175,7 @@ document.getElementById('purchaseForm').addEventListener('submit', async functio
 
     let logoDataUrl = null;
     try {
-        logoDataUrl = await loadImageDataUrl('/images/logo.png');
+        logoDataUrl = await loadImageDataUrl('images/logo.png');
     } catch (error) {
         console.warn('Logo could not be loaded for invoice PDF.', error);
     }
